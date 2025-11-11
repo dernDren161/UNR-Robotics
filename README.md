@@ -1,75 +1,162 @@
-# React + TypeScript + Vite
+# UNR Robotics - ROS2 Web Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**University of Nevada, Reno Robotics Project**  
+*Project by: Prastik Gyawali*
 
-Currently, two official plugins are available:
+A modern React-based web interface for ROS2 robotics applications, featuring containerized ROS2 Humble environment with web connectivity capabilities.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎥 Demo Video
 
-## React Compiler
+**Demo Video**: See `assets/demo-video.mov` for application demonstration
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+> **Note**: To add the demo video to this repository, copy your screen recording:
+> ```bash
+> cp "/Users/prastik/Documents/Screen Recording 2025-11-11 at 9.52.18 PM.mov" "./assets/demo-video.mov"
+> ```
 
-Note: This will impact Vite dev & build performances.
+![Demo Preview](https://img.shields.io/badge/Demo-Video_Available-brightgreen?style=for-the-badge&logo=play-circle)
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Interactive Web Interface**: Modern React application with TypeScript
+- **ROS2 Integration**: Containerized ROS2 Humble environment
+- **Web Robotics**: Rosbridge server for web-based robot control
+- **Educational Tools**: Turtlesim and demo nodes for learning
+- **Responsive Design**: Mobile-friendly interface with beautiful UI
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🐳 Docker Environment
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+This project provides a **containerized ROS2 Humble environment** with essential packages for robotics development and web-based robot control.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Base Configuration
+
+- **Base Image**: `ros:humble-ros-core` - Official minimal ROS2 Humble image
+- **Environment**: Non-interactive Debian frontend for smooth installation
+- **Entry Point**: Automatic ROS2 environment sourcing with bash shell
+
+### Installed ROS2 Packages
+
+#### 🎯 ROS2 Demo Nodes (`ros-humble-demo-nodes-cpp`)
+C++ example nodes for learning ROS2 concepts:
+- Publishers and subscribers
+- Services and actions
+- Parameter handling
+- Node lifecycle management
+
+#### 🐢 Turtlesim (`ros-humble-turtlesim`)
+The classic turtle simulation for ROS2, perfect for:
+- **Learning ROS2 basics** - Topics, services, and parameter concepts
+- **Testing robot control** - Movement commands and teleoperation
+- **Visualization** - Simple 2D robot simulation environment
+
+#### 🌐 Rosbridge Server (`ros-humble-rosbridge-server`)
+Enables web-based robot control through:
+- **WebSocket communication** - Real-time bidirectional data exchange
+- **Web interface development** - Build robot control dashboards in browsers
+- **Cross-platform integration** - Connect web applications to ROS2 ecosystem
+
+## 🛠️ Quick Start
+
+### Using Docker
+
+1. **Build the container:**
+   ```bash
+   docker build -t unr-robotics .
+   ```
+
+2. **Run the container:**
+   ```bash
+   docker run -it --rm unr-robotics
+   ```
+
+3. **For web connectivity (rosbridge):**
+   ```bash
+   docker run -it --rm -p 9090:9090 unr-robotics
+   ```
+
+### Development Setup
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   pnpm install
+   ```
+
+2. **Start development server:**
+   ```bash
+   npm run dev
+   # or
+   pnpm dev
+   ```
+
+3. **Build for production:**
+   ```bash
+   npm run build
+   # or
+   pnpm build
+   ```
+
+## 📚 Project Structure
+
+```
+├── src/
+│   ├── App.tsx          # Main application component
+│   ├── App.css          # Styling and themes
+│   └── assets/          # Static assets
+├── Dockerfile           # ROS2 container configuration
+├── package.json         # Node.js dependencies
+└── README.md           # Project documentation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎯 Usage Scenarios
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Educational Use
+- **ROS2 Learning**: Use turtlesim and demo nodes for hands-on experience
+- **Concept Demonstration**: Visualize robotics concepts through web interface
+- **Rapid Prototyping**: Skip complex local ROS2 installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Development Applications
+- **Web UIs**: Build robot control and monitoring dashboards
+- **Mobile Apps**: Create mobile applications for robot interaction
+- **Cloud Robotics**: Develop cloud-based robotics solutions
+- **Research Projects**: Academic robotics research and development
+
+## 🔧 Technology Stack
+
+- **Frontend**: React 19 with TypeScript
+- **Build Tool**: Vite for fast development and building
+- **Robotics**: ROS2 Humble with rosbridge-server
+- **Containerization**: Docker for consistent deployment
+- **Styling**: Modern CSS with responsive design
+
+## 📖 Documentation
+
+The application includes comprehensive documentation covering:
+- ROS2 Docker environment setup
+- Package explanations and usage
+- Container entry point configuration
+- Development and deployment guides
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is part of the University of Nevada, Reno robotics program.
+
+## 🔗 Links
+
+- [ROS2 Documentation](https://docs.ros.org/en/humble/)
+- [React Documentation](https://react.dev/)
+- [Vite Documentation](https://vite.dev/)
+- [TypeScript Documentation](https://www.typescriptlang.org/)
+
+---
+
+*Built with ❤️ at University of Nevada, Reno*
