@@ -7,7 +7,9 @@ A modern React-based web interface for ROS2 robotics applications, featuring con
 
 ## 🎥 Demo Video
 
-**Demo Video**: See `assets/demo-video.mov` for application demonstration
+
+**Demo Video**:
+https://github.com/user-attachments/assets/d906e229-d62c-4949-8571-f438cd3befe2
 
 
 > **Note**: To add the demo video to this repository, copy your screen recording:
@@ -120,9 +122,9 @@ Enables web-based robot control through:
 ### Development Applications
 - **Web UIs**: Build robot control and monitoring dashboards
 - **Mobile Apps**: Create mobile applications for robot interaction
-- **Cloud Robotics
+- **Cloud Robotics**
 
-https://github.com/user-attachments/assets/d906e229-d62c-4949-8571-f438cd3befe2
+
 
 cs**: Develop cloud-based robotics solutions
 - **Research Projects**: Academic robotics research and development
