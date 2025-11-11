@@ -8,8 +8,9 @@ A modern React-based web interface for ROS2 robotics applications, featuring con
 ## 🎥 Demo Video
 
 
-**Demo Video**:
-https://github.com/user-attachments/assets/d906e229-d62c-4949-8571-f438cd3befe2
+<video src="https://github.com/user-attachments/assets/d906e229-d62c-4949-8571-f438cd3befe2" controls width="600">
+ Demo Video
+</video>
 
 
 > **Note**: To add the demo video to this repository, copy your screen recording:
