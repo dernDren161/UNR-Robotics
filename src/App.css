@@ -1,0 +1,427 @@
+.app {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Landing Page Styles */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  color: white;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #e0e0e0;
+  font-style: italic;
+}
+
+.button-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.docs-button {
+  background: linear-gradient(45deg, #4CAF50, #45a049);
+  color: white;
+}
+
+.docs-button:hover {
+  background: linear-gradient(45deg, #45a049, #3d8b40);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.demo-button {
+  background: linear-gradient(45deg, #2196F3, #1976D2);
+  color: white;
+}
+
+.demo-button:hover {
+  background: linear-gradient(45deg, #1976D2, #1565C0);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+}
+
+/* Common Page Styles */
+.docs-page, .demo-page {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.back-button {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.back-button:hover {
+  background: linear-gradient(45deg, #ee5a52, #dc4c41);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+/* Docs Page Styles */
+.docs-content {
+  color: #333;
+}
+
+.docs-content h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.markdown-content {
+  line-height: 1.6;
+  text-align: left;
+}
+
+.markdown-content h2 {
+  color: #34495e;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.markdown-content h3 {
+  color: #2980b9;
+  margin-top: 1.5rem;
+}
+
+.markdown-content p {
+  margin: 1rem 0;
+}
+
+.markdown-content strong {
+  color: #e74c3c;
+  font-weight: 700;
+}
+
+.markdown-content em {
+  color: #9b59b6;
+  font-style: italic;
+}
+
+.markdown-content code {
+  background: #f8f9fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  color: #e74c3c;
+  font-family: 'Courier New', monospace;
+}
+
+.markdown-content ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.markdown-content li {
+  margin: 0.5rem 0;
+}
+
+/* Demo Page Styles */
+.demo-content {
+  text-align: center;
+}
+
+.demo-title {
+  color: #2c3e50;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.demo-link {
+  margin: 2rem 0;
+}
+
+.demo-link a {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 2px solid #3498db;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.demo-link a:hover {
+  background: #3498db;
+  color: white;
+  transform: scale(1.05);
+}
+
+.upload-section {
+  margin-top: 3rem;
+}
+
+.file-input {
+  display: none;
+}
+
+.upload-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+  color: #333;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+}
+
+.upload-button:hover {
+  background: linear-gradient(45deg, #fecfef, #ff9a9e);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 154, 158, 0.4);
+}
+
+/* Demo Container Layout */
+.demo-container {
+  display: flex;
+  gap: 2rem;
+  min-height: 600px;
+}
+
+.demo-left {
+  flex: 1;
+  text-align: center;
+}
+
+.demo-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  min-height: 500px;
+}
+
+/* Loader Styles */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-container p {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Results Styles */
+.results-container {
+  width: 100%;
+}
+
+.results-container h3 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.images-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.result-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.result-image {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.result-image-container p {
+  margin: 0.5rem 0 0 0;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Error and Placeholder Styles */
+.error-message {
+  background: #e74c3c;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Equation Styling */
+.equation {
+  background: #f8f9fa;
+  border-left: 4px solid #3498db;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+.equation p {
+  margin: 0;
+  font-family: 'Times New Roman', serif;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.markdown-content sup {
+  font-size: 0.8em;
+  vertical-align: super;
+}
+
+.markdown-content sub {
+  font-size: 0.8em;
+  vertical-align: sub;
+}
+
+/* Enhanced Documentation Styling */
+.docs-content h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 1rem;
+}
+
+.markdown-content p:first-of-type {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #34495e;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #ecf0f1;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+  
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-button {
+    width: 200px;
+  }
+  
+  .docs-page, .demo-page {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .equation {
+    padding: 0.5rem;
+  }
+  
+  .equation p {
+    font-size: 1rem;
+  }
+  
+  .demo-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .demo-right {
+    min-height: 300px;
+  }
+  
+  .result-image {
+    max-width: 250px;
+    max-height: 250px;
+  }
+}
